@@ -35,4 +35,93 @@ Implement functionality to delete menu items securely, using the VerifyAdmin mid
 Learn to create a form for updating existing menu items, allowing for efficient editing and ensuring that changes are accurately reflected in the system.
 
 
+
+## File Structure
+
+Install my-project with npm
+
+src
+├── assets
+│   └── images
+├── components
+│   ├── FoodCard
+│   │   └── FoodCard.jsx
+│   ├── SectionTitle
+│   │   └── SectionTitle.jsx
+│   ├── SocialLogin
+│   │   └── SocialLogin.jsx
+├── firebase
+│   └── firebase.config.js
+├── hooks
+│   ├── useAdmin.jsx
+│   ├── useAuth.jsx
+│   ├── useAxiosPublic.jsx
+│   ├── useAxiosSecure.jsx
+│   ├── useCart.jsx
+│   └── useMenu.jsx
+├── Layout
+│   ├── Dashboard.jsx
+│   └── Main.jsx
+├── pages
+│   ├── Dashboard
+│   │   ├── AddItems.jsx
+│   │   ├── AdminHome
+│   │   │   └── AdminHome.jsx
+│   │   ├── AllUsers
+│   │   │   └── AllUsers.jsx
+│   │   ├── Cart
+│   │   │   └── Cart.jsx
+│   │   ├── ManageItems
+│   │   │   └── ManageItems.jsx
+│   │   ├── Payment
+│   │   │   ├── _payment_steps_.js
+│   │   │   ├── CheckoutForm.jsx
+│   │   │   └── Payment.jsx
+│   │   ├── PaymentHistory
+│   │   │   └── PaymentHistory.jsx
+│   │   └── UpdateItem
+│   │       └── UpdateItem.jsx
+│   ├── UserHome
+│   │   ├── UserHome.jsx
+│   │   └── _Page_level_security_.js
+│   ├── Home
+│   │   ├── Banner
+│   │   │   └── Banner.jsx
+│   │   ├── Category
+│   │   │   └── Category.jsx
+│   │   ├── Featured
+│   │   │   ├── Featured.css
+│   │   │   └── Featured.jsx
+│   │   ├── Home.jsx
+│   │   ├── PopularMenu
+│   │   │   └── PopularMenu.jsx
+│   │   └── Testimonials
+│   │       └── Testimonials.jsx
+│   ├── Login
+│   │   └── Login.jsx
+│   ├── Menu
+│   │   ├── Menu.jsx
+│   │   └── MenuCategory.jsx
+│   ├── Order
+│   │   ├── Order.jsx
+│   │   └── OrderTab.jsx
+│   └── Shared
+│       ├── Cover
+│       │   └── Cover.jsx
+│       └── Footer
+│           └── Footer.jsx
+├── NavBar
+│   ├── NavBar.jsx
+├── Routes
+│   ├── AdminRoute.jsx
+│   ├── PrivateRoute.jsx
+│   └── Routes.jsx
+├── providers
+│   ├── AuthProvider.jsx
+├── App.css
+├── App.jsx
+├── index.css
+├── main.jsx
+
+
 ---
