@@ -42,6 +42,8 @@ Install my-project with npm
 ```plaintext
 
 src/
+├── api/
+│   └── utils.js
 ├── assets/
 │   └── images/
 ├── components/
@@ -56,32 +58,50 @@ src/
 ├── hooks/
 │   ├── useAdmin.jsx
 │   ├── useAuth.jsx
+│   ├── useAxiosPublic.jsx
 │   ├── useAxiosSecure.jsx
-│   └── useCart.jsx
-├── layout/
-│   └── Layout.jsx
+│   ├── useCart.jsx
+│   └── useMenu.jsx
+├── Layout/
+│   ├── Dashboard.jsx
+│   └── Main.jsx
 ├── pages/
 │   ├── Dashboard/
 │   │   ├── AddItems.jsx
-│   │   ├── AdminHome.jsx
-│   │   ├── AllUsers.jsx
-│   │   ├── Cart.jsx
-│   │   ├── ManageItems.jsx
+│   │   ├── AdminHome/
+│   │   │   └── AdminHome.jsx
+│   │   ├── AllUsers/
+│   │   │   └── AllUsers.jsx
+│   │   ├── Cart/
+│   │   │   └── Cart.jsx
+│   │   ├── ManageItems/
+│   │   │   └── ManageItems.jsx
 │   │   ├── Payment/
+│   │   │   ├── _payment_steps_.js
 │   │   │   ├── CheckoutForm.jsx
-│   │   │   ├── Payment.jsx
-│   │   │   └── payment_steps.js
-│   │   ├── PaymentHistory.jsx
-│   │   ├── UpdateItem.jsx
-│   │   └── UserHome.jsx
+│   │   │   └── Payment.jsx
+│   │   ├── PaymentHistory/
+│   │   │   └── PaymentHistory.jsx
+│   │   └── UpdateItem/
+│   │       └── UpdateItem.jsx
+│   ├── UserHome/
+│   │   ├── UserHome.jsx
+│   │   └── _Page_level_security_.js
 │   ├── Home/
-│   │   ├── Banner.jsx
-│   │   ├── Category.jsx
+│   │   ├── Banner/
+│   │   │   └── Banner.jsx
+│   │   ├── Category/
+│   │   │   └── Category.jsx
 │   │   ├── Featured/
-│   │   │   ├── Featured.jsx
+│   │   │   ├── Featured.css
+│   │   │   └── Featured.jsx
+│   │   ├── PopularMenu/
 │   │   │   └── PopularMenu.jsx
-│   │   ├── Testimonials.jsx
-│   │   └── Page_level_security.js
+│   │   ├── Testimonials/
+│   │   │   └── Testimonials.jsx
+│   │   └── Home.jsx
+│   ├── Login/
+│   │   └── Login.jsx
 │   ├── Menu/
 │   │   ├── Menu.jsx
 │   │   └── MenuCategory.jsx
@@ -89,18 +109,23 @@ src/
 │   │   ├── Order.jsx
 │   │   └── OrderTab.jsx
 │   └── Shared/
-│       ├── Cover.jsx
-│       ├── Footer.jsx
-│       └── NavBar.jsx
-├── routes/
+│       ├── Cover/
+│       │   └── Cover.jsx
+│       └── Footer/
+│           └── Footer.jsx
+├── NavBar/
+│   └── NavBar.jsx
+├── providers/
+│   └── AuthProvider.jsx
+├── Routes/
 │   ├── AdminRoute.jsx
 │   ├── PrivateRoute.jsx
 │   └── Routes.jsx
-├── providers/
-│   └── AuthProvider.jsx
 ├── App.css
 ├── App.jsx
+├── index.css
 └── main.jsx
+
 
 ```
 
