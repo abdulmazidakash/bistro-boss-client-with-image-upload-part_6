@@ -39,89 +39,68 @@ Learn to create a form for updating existing menu items, allowing for efficient 
 ## File Structure
 
 Install my-project with npm
+```plaintext
 
-src
-├── assets
-│   └── images
-├── components
-│   ├── FoodCard
+src/
+├── assets/
+│   └── images/
+├── components/
+│   ├── FoodCard/
 │   │   └── FoodCard.jsx
-│   ├── SectionTitle
+│   ├── SectionTitle/
 │   │   └── SectionTitle.jsx
-│   ├── SocialLogin
+│   ├── SocialLogin/
 │   │   └── SocialLogin.jsx
-├── firebase
+├── firebase/
 │   └── firebase.config.js
-├── hooks
+├── hooks/
 │   ├── useAdmin.jsx
 │   ├── useAuth.jsx
-│   ├── useAxiosPublic.jsx
 │   ├── useAxiosSecure.jsx
-│   ├── useCart.jsx
-│   └── useMenu.jsx
-├── Layout
-│   ├── Dashboard.jsx
-│   └── Main.jsx
-├── pages
-│   ├── Dashboard
+│   └── useCart.jsx
+├── layout/
+│   └── Layout.jsx
+├── pages/
+│   ├── Dashboard/
 │   │   ├── AddItems.jsx
-│   │   ├── AdminHome
-│   │   │   └── AdminHome.jsx
-│   │   ├── AllUsers
-│   │   │   └── AllUsers.jsx
-│   │   ├── Cart
-│   │   │   └── Cart.jsx
-│   │   ├── ManageItems
-│   │   │   └── ManageItems.jsx
-│   │   ├── Payment
-│   │   │   ├── _payment_steps_.js
+│   │   ├── AdminHome.jsx
+│   │   ├── AllUsers.jsx
+│   │   ├── Cart.jsx
+│   │   ├── ManageItems.jsx
+│   │   ├── Payment/
 │   │   │   ├── CheckoutForm.jsx
-│   │   │   └── Payment.jsx
-│   │   ├── PaymentHistory
-│   │   │   └── PaymentHistory.jsx
-│   │   └── UpdateItem
-│   │       └── UpdateItem.jsx
-│   ├── UserHome
-│   │   ├── UserHome.jsx
-│   │   └── _Page_level_security_.js
-│   ├── Home
-│   │   ├── Banner
-│   │   │   └── Banner.jsx
-│   │   ├── Category
-│   │   │   └── Category.jsx
-│   │   ├── Featured
-│   │   │   ├── Featured.css
-│   │   │   └── Featured.jsx
-│   │   ├── Home.jsx
-│   │   ├── PopularMenu
+│   │   │   ├── Payment.jsx
+│   │   │   └── payment_steps.js
+│   │   ├── PaymentHistory.jsx
+│   │   ├── UpdateItem.jsx
+│   │   └── UserHome.jsx
+│   ├── Home/
+│   │   ├── Banner.jsx
+│   │   ├── Category.jsx
+│   │   ├── Featured/
+│   │   │   ├── Featured.jsx
 │   │   │   └── PopularMenu.jsx
-│   │   └── Testimonials
-│   │       └── Testimonials.jsx
-│   ├── Login
-│   │   └── Login.jsx
-│   ├── Menu
+│   │   ├── Testimonials.jsx
+│   │   └── Page_level_security.js
+│   ├── Menu/
 │   │   ├── Menu.jsx
 │   │   └── MenuCategory.jsx
-│   ├── Order
+│   ├── Order/
 │   │   ├── Order.jsx
 │   │   └── OrderTab.jsx
-│   └── Shared
-│       ├── Cover
-│       │   └── Cover.jsx
-│       └── Footer
-│           └── Footer.jsx
-├── NavBar
-│   ├── NavBar.jsx
-├── Routes
+│   └── Shared/
+│       ├── Cover.jsx
+│       ├── Footer.jsx
+│       └── NavBar.jsx
+├── routes/
 │   ├── AdminRoute.jsx
 │   ├── PrivateRoute.jsx
 │   └── Routes.jsx
-├── providers
-│   ├── AuthProvider.jsx
+├── providers/
+│   └── AuthProvider.jsx
 ├── App.css
 ├── App.jsx
-├── index.css
-├── main.jsx
+└── main.jsx
 
+```
 
----
