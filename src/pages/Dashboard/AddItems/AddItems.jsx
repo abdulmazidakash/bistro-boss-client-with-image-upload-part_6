@@ -16,6 +16,7 @@ const AddItems = () => {
         console.log(data)
         // image upload to imgbb and then get an url
         const imageFile = { image: data.image[0] }
+        console.log(imageFile.image.name)
         const res = await axiosPublic.post(image_hosting_api, imageFile, {
             headers: {
                 'content-type': 'multipart/form-data'
@@ -70,7 +71,9 @@ const AddItems = () => {
                             <label className="label">
                                 <span className="label-text">Category*</span>
                             </label>
-                            <select defaultValue="default" {...register('category', { required: true })}
+                            <select 
+                            defaultValue="default" 
+                            {...register('category', { required: true })}
                                 className="select select-bordered w-full">
                                 <option disabled value="default">Select a category</option>
                                 <option value="salad">Salad</option>
