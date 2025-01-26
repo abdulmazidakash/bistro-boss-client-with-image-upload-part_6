@@ -1,22 +1,65 @@
-import { loadStripe } from "@stripe/stripe-js";
-import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+// import { loadStripe } from "@stripe/stripe-js";
+// import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+// import { Elements } from "@stripe/react-stripe-js";
+// import CheckoutForm from "./CheckoutForm";
+
+// //todo: add publishable key
+// const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gatway_PK);
+
+// const Payment = () => {
+// 	return (
+// 		<div>
+// 			<SectionTitle heading={'Payment'} subHeading={'Please pay to eat'}></SectionTitle>
+// 			<div>
+// 				<Elements stripe={stripePromise}>
+// 					<CheckoutForm></CheckoutForm>
+// 				</Elements>
+// 			</div>
+// 		</div>
+// 	);
+// };
+
+// export default Payment;
+
 import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+import { useState } from "react";
+
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import CheckoutForm from "./CheckoutForm";
+import SSLPayment from "./ssl-payment";
 
-//todo: add publishable key
-const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gatway_PK);
-
+// TODO: add publishable key
+const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 const Payment = () => {
-	return (
-		<div>
-			<SectionTitle heading={'Payment'} subHeading={'Please pay to eat'}></SectionTitle>
-			<div>
-				<Elements stripe={stripePromise}>
-					<CheckoutForm></CheckoutForm>
-				</Elements>
-			</div>
-		</div>
-	);
+  const [method, setMethod] = useState("stripe");
+
+  return (
+    <div>
+      <SectionTitle
+        heading="Payment"
+        subHeading="Please pay to eat"
+      ></SectionTitle>
+
+      <select
+        onChange={(e) => setMethod(e.target.value)}
+        className="select select-bordered w-full max-w-xs my-10"
+      >
+        <option value="stripe">Stripe</option>
+        <option value="ssl">SSL Commerze</option>
+      </select>
+
+      {method == "stripe" ? (
+        <div>
+          <Elements stripe={stripePromise}>
+            <CheckoutForm></CheckoutForm>
+          </Elements>
+        </div>
+      ) : (
+        <SSLPayment></SSLPayment>
+      )}
+    </div>
+  );
 };
 
 export default Payment;
